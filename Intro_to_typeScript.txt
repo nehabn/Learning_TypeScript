@@ -6,3 +6,60 @@
 - string[]
 - number[]
 - boolean[]
+
+
+# NOTE
+
+- TypeScript requires you to specify the type of the variable/argument/parameter.
+- For the above types it can be done by specifying it as <var>: <type>
+- If type is not provided, an error is displayed
+- Guides us to send the correct type of data
+
+
+# To specify a object type
+
+function formatCar(car: { year: number, model: string, make: string }) {
+  return `Year: ${car.year}, model: ${car.model}, make: ${car.make}`;
+}
+
+formatCar({
+  year: 2015,
+  model: 'Mustang',  
+  make: 'Ford',
+});
+
+
+# defining an interface
+
+interface Car { // should be capital
+  year: number;
+  make: string;
+  modal: string;
+}
+
+. used often
+. to keep component tidy
+
+# now this interface can be used to specify the type instead of the long string
+
+function formatCar(car: Car) {
+  ...
+}
+
+
+# Using type script in react
+
+import React from 'react'; // not present here
+
+interface TaskShowProps {
+  title: string;
+  completed: boolean;
+}
+
+function TaskShow({ title, completed }: TaskShowProps) {
+  return ‹div>
+    {title} - {completed ? 'Done' : 'Need to complete'}
+  </div>;
+}
+
+<TaskShow title="Write an interface" completed={true} />
