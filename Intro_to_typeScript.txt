@@ -1,0 +1,8 @@
+# Basic types in TypeScript
+
+- string
+- number
+- boolean
+- string[]
+- number[]
+- boolean[]
