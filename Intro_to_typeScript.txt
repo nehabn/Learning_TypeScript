@@ -63,3 +63,19 @@ function TaskShow({ title, completed }: TaskShowProps) {
 }
 
 <TaskShow title="Write an interface" completed={true} />
+
+
+# Type Inference
+
+- TS can guess the types of your variables
+- When manually describing the constants
+
+const camaro: Car = { with this the error can be detected early on
+  modal: 'Camaro',
+  year: 2010
+}
+
+const mustang: Car = {
+  modal: 'Mustsng',
+  year: '2089' // here it is incorrect
+}
